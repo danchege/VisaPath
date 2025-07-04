@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Roboto:wght@400;500&display=swap');
+:root {
+  --primary: #0a2540;
+  --secondary: #1e90ff;
+  --accent: #00cfff;
+  --bg: #101820;
+  --text: #fff;
+  --muted: #b0b8c1;
+  --radius: 1.2rem;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header, footer {
+  background: var(--primary);
+  color: var(--text);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+.logo img {
+  height: 44px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: var(--text);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: var(--accent);
+}
+.testimonials-hero {
+  background: linear-gradient(120deg, var(--primary) 60%, var(--secondary) 100%);
+  text-align: center;
+  padding: 3rem 1rem 2rem 1rem;
+}
+.testimonials-hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.testimonials-hero p {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+.testimonials-list {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+.testimonial-card {
+  background: rgba(16,24,32,0.98);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 260px;
+  max-width: 320px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.testimonial-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--secondary);
+}
+.testimonial-card blockquote {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+.client-name {
+  color: var(--accent);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+footer {
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  margin-top: 3rem;
+}
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.footer-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-nav a:hover {
+  color: var(--accent);
+}
+.footer-social {
+  margin-bottom: 1rem;
+}
+.footer-social a img {
+  width: 32px;
+  height: 32px;
+  margin: 0 0.5rem;
+  opacity: 0.85;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.footer-social a img:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+.footer-copy {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 900px) {
+  .testimonials-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem;
+  }
+  .nav-links {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  .testimonials-hero {
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+  }
+  .testimonials-hero h1 {
+    font-size: 1.3rem;
+  }
+  .testimonial-img {
+    width: 48px;
+    height: 48px;
+    max-width: 100%;
+    height: auto;
+  }
+  .testimonial-card {
+    min-width: 90vw;
+    max-width: 98vw;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+  .testimonials-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+.logo-text {
+  font-family: 'Orbitron', 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px #00cfff, 0 0 16px #1e90ff, 0 2px 12px rgba(0,207,255,0.18);
+}
+.logo-visa {
+  color: var(--accent);
+  margin-right: 0.1em;
+  text-shadow: 0 2px 12px rgba(0,207,255,0.12);
+}
+.logo-path {
+  color: var(--secondary);
+  text-shadow: 0 2px 12px rgba(30,144,255,0.12);
+}
+.logo-link {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}

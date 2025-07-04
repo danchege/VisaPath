@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Roboto:wght@400;500&display=swap');
+:root {
+  --primary: #0a2540;
+  --secondary: #1e90ff;
+  --accent: #00cfff;
+  --bg: #101820;
+  --text: #fff;
+  --muted: #b0b8c1;
+  --radius: 1.2rem;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header, footer {
+  background: var(--primary);
+  color: var(--text);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+.logo img {
+  height: 44px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: var(--text);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: var(--accent);
+}
+.request-hero {
+  background: linear-gradient(120deg, var(--primary) 60%, var(--secondary) 100%);
+  text-align: center;
+  padding: 3rem 1rem 2rem 1rem;
+}
+.request-hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.request-hero p {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+.request-form-section {
+  max-width: 500px;
+  margin: 2.5rem auto;
+  background: rgba(16,24,32,0.98);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+}
+.request-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--secondary);
+}
+.request-form input,
+.request-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1.2rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--muted);
+  background: #181f2a;
+  color: var(--text);
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  transition: border 0.2s;
+}
+.request-form input:focus,
+.request-form textarea:focus {
+  border: 1.5px solid var(--accent);
+  outline: none;
+}
+.btn-primary {
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.9rem 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(30,144,255,0.08);
+}
+.btn-primary:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+.form-note {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 1rem;
+  text-align: center;
+  background: #181f2a;
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+footer {
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  margin-top: 3rem;
+}
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.footer-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-nav a:hover {
+  color: var(--accent);
+}
+.footer-social {
+  margin-bottom: 1rem;
+}
+.footer-social a img {
+  width: 32px;
+  height: 32px;
+  margin: 0 0.5rem;
+  opacity: 0.85;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.footer-social a img:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+.footer-copy {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem;
+  }
+  .nav-links {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  .request-hero {
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+  }
+  .request-hero h1 {
+    font-size: 1.3rem;
+  }
+  .request-form-section {
+    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+  }
+}
+.logo-text {
+  font-family: 'Orbitron', 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px #00cfff, 0 0 16px #1e90ff, 0 2px 12px rgba(0,207,255,0.18);
+}
+.logo-visa {
+  color: var(--accent);
+  margin-right: 0.1em;
+  text-shadow: 0 2px 12px rgba(0,207,255,0.12);
+}
+.logo-path {
+  color: var(--secondary);
+  text-shadow: 0 2px 12px rgba(30,144,255,0.12);
+}
+.logo-link {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
