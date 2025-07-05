@@ -225,3 +225,168 @@ footer {
   cursor: pointer;
   display: inline-block;
 }
+.job-payment {
+  margin: 10px 0 0 0;
+  font-size: 1rem;
+  color: #2d4a53;
+  background: #f3f8fa;
+  border-radius: 6px;
+  padding: 7px 12px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(44, 62, 80, 0.04);
+  display: inline-block;
+}
+.job-slots {
+  margin: 7px 0 0 0;
+  font-size: 1rem;
+  color: #1a3a3a;
+  background: #eaf6f3;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(44, 62, 80, 0.03);
+  display: inline-block;
+}
+.country-group {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e6ea;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  padding-top: 1.2rem;
+  background: rgba(255,255,255,0.01);
+  border-radius: 10px;
+}
+.job-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+}
+.country-heading {
+  margin-bottom: 1.8rem;
+}
+.flag-icon {
+  width: 24px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 0.6em;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(44,62,80,0.07);
+  object-fit: cover;
+}
+.country-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0 2.5rem 0;
+  justify-items: center;
+}
+.country-card {
+  background: #f3f8fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+  padding: 1.2rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 2px solid transparent;
+  min-width: 120px;
+}
+.country-card:hover, .country-card.active {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(44,62,80,0.13);
+  border-color: #2d4a53;
+}
+.country-card .flag-icon {
+  width: 48px;
+  height: 36px;
+  margin-bottom: 0.7em;
+  box-shadow: 0 1px 2px rgba(44,62,80,0.09);
+}
+.country-card span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a3a3a;
+  text-align: center;
+}
+.back-to-countries {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0 1.5rem 0;
+}
+.back-card {
+  background: #eaf6f3;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+  padding: 1.2rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a3a3a;
+  cursor: pointer;
+  border: 2px solid #2d4a53;
+  transition: background 0.18s;
+}
+.back-card:hover {
+  background: #d2ede3;
+}
+.jobs-list {
+  display: none;
+}
+.country-group {
+  display: none;
+}
+.jobs-list.active {
+  display: block;
+}
+.country-group.active {
+  display: block;
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 900px) {
+  .job-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .country-group {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .job-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .country-group {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    padding-top: 0.7rem;
+  }
+  .country-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+  .country-card {
+    padding: 0.8rem 0.5rem 0.7rem 0.5rem;
+    min-width: 90px;
+  }
+  .country-card .flag-icon {
+    width: 36px;
+    height: 27px;
+  }
+}
+.no-jobs {
+  color: #888;
+  font-size: 1.05rem;
+  margin: 1.2rem 0 0 0;
+  padding: 0.7rem 1.2rem;
+  background: #f8fafb;
+  border-radius: 6px;
+  text-align: center;
+}

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request a Job | VisaPath</title>
-    <link rel="stylesheet" href="css/style-request.css">
+    <title>Contact | VisaPath</title>
+    <link rel="stylesheet" href="css/style-contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -21,36 +21,37 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="jobs.html">Jobs Available</a></li>
-                <li><a href="request-job.html" class="active">Request a Job</a></li>
+                <li><a href="request-job.html">Request a Job</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="nav-item"><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="request-hero">
-            <h1>Request a Job</h1>
-            <p>Submit your details and let us help you find your next opportunity abroad.</p>
+        <section class="contact-hero">
+            <h1>Contact Us</h1>
+            <p>We're here to help you start your journey. Reach out to us!</p>
         </section>
-        <section class="request-form-section">
-            <form id="job-request-form" class="request-form" autocomplete="off">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="country">Country</label>
-                <input type="text" id="country" name="country" required>
-                <label for="position">Desired Position</label>
-                <input type="text" id="position" name="position" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="notes">Additional Notes</label>
-                <textarea id="notes" name="notes" rows="3"></textarea>
-                <button type="submit" class="btn btn-primary">Submit Request</button>
-            </form>
-            <div class="form-note">
-                <strong>Note:</strong> First come, first served – no discrimination. All applicants are considered equally.
+        <section class="contact-details">
+            <div class="contact-info">
+                <h2>Agency Contact Info</h2>
+                <p><strong>Email:</strong> info@visapath.co.ke</p>
+                <p><strong>Phone:</strong> +254 700 000 000</p>
+                <p><strong>Address:</strong> Nairobi, Kenya</p>
+            </div>
+            <div class="contact-form-section">
+                <form id="contact-form" class="contact-form" autocomplete="off">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="map-placeholder">
+                <div class="map-box">Google Maps Placeholder</div>
             </div>
         </section>
     </main>
@@ -62,7 +63,6 @@
                 <li><a href="request-job.html">Request a Job</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="terms.html">Terms & Conditions</a></li>
             </ul>
         </div>
         <div class="footer-social">
@@ -78,6 +78,6 @@
         </div>
         <div class="footer-copy">&copy; 2025 VisaPath. All rights reserved.</div>
     </footer>
-    <script src="js/script-request.js"></script>
+    <script src="js/script-contact.js"></script>
 </body>
 </html> 
