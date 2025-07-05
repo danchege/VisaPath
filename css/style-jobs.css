@@ -144,10 +144,13 @@ footer {
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  transition: color 0.2s;
+  transition: color 0.2s, border-bottom 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
 }
-.footer-nav a:hover {
+.footer-nav a:hover, .footer-nav a:focus {
   color: var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 .footer-social {
   margin-bottom: 1rem;
@@ -172,6 +175,69 @@ footer {
   .jobs-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
+  }
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+    z-index: 120;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .nav-toggle .bar {
+    display: block;
+    width: 28px;
+    height: 4px;
+    margin: 6px auto;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+  }
+  .nav-toggle.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  .nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 80vw;
+    max-width: 340px;
+    height: 100vh;
+    background: var(--primary);
+    box-shadow: -2px 0 16px rgba(0,0,0,0.12);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4.5rem 2rem 2rem 2rem;
+    gap: 2rem;
+    z-index: 110;
+    transition: right 0.35s cubic-bezier(.68,-0.55,.27,1.55);
+    display: flex;
+  }
+  .nav-links.open {
+    right: 0;
+  }
+  .mobile-nav-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(10,37,64,0.55);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .mobile-nav-overlay.active {
+    opacity: 1;
+    pointer-events: all;
   }
 }
 @media (max-width: 600px) {
@@ -198,6 +264,11 @@ footer {
   .jobs-list {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .footer-nav a {
+    font-size: 1.1rem;
+    transition: color 0.2s, border-bottom 0.35s cubic-bezier(.68,-0.55,.27,1.55);
+    padding-bottom: 3px;
   }
 }
 .logo-text {
