@@ -46,33 +46,28 @@ document.querySelectorAll('.rotating-icons .icon').forEach(icon => {
   });
 });
 
-// --- Creative Mobile Navigation ---
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-const navOverlay = document.querySelector('.mobile-nav-overlay');
-
-if (navToggle && navLinks && navOverlay) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    navToggle.classList.toggle('active', isOpen);
-    navOverlay.classList.toggle('active', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-  navOverlay.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.classList.remove('active');
-    navOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      navToggle.classList.remove('active');
-      navOverlay.classList.remove('active');
-      document.body.style.overflow = '';
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
+// --- Parallax Effect for Hero Section ---
+(function() {
+  const layers = [
+    document.querySelector('.parallax-layer1'),
+    document.querySelector('.parallax-layer2'),
+    document.querySelector('.parallax-layer3')
+  ];
+  if (!layers[0] || !layers[1] || !layers[2]) return;
+  function parallax(e) {
+    const w = window.innerWidth, h = window.innerHeight;
+    let x = 0, y = 0;
+    if (e.type === 'mousemove') {
+      x = (e.clientX - w/2) / (w/2);
+      y = (e.clientY - h/2) / (h/2);
+    } else if (e.type === 'deviceorientation' && e.gamma && e.beta) {
+      x = e.gamma / 45; // gamma: left-right
+      y = e.beta / 90 - 0.5; // beta: front-back
+    }
+    layers[0].style.transform = `translate(${x*30}px, ${y*20}px)`;
+    layers[1].style.transform = `translate(${-x*40}px, ${-y*30}px)`;
+    layers[2].style.transform = `translate(${x*60}px, ${-y*10}px)`;
+  }
+  window.addEventListener('mousemove', parallax);
+  window.addEventListener('deviceorientation', parallax);
+})();
