@@ -1,13 +1,3 @@
-// Apply Now button functionality
-const applyBtns = document.querySelectorAll('.apply-btn');
-applyBtns.forEach(btn => {
-  btn.addEventListener('click', function() {
-    const job = btn.getAttribute('data-job');
-    if (confirm(`Do you meet the requirements for the position: ${job}?`)) {
-      window.location.href = 'contact.html';
-    }
-  });
-});
 // Animate job cards on hover
 const jobCards = document.querySelectorAll('.job-card');
 jobCards.forEach(card => {

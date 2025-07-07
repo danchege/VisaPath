@@ -678,9 +678,6 @@ footer {
 
 .nav-dropdown {
   display: none;
-  font-size: 0.93rem;
-  padding: 0.45em 1.5em 0.45em 0.8em;
-  max-width: 180px;
 }
 .nav-dropdown option {
   font-size: 0.93rem;

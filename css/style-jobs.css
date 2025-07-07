@@ -461,3 +461,76 @@ footer {
   border-radius: 6px;
   text-align: center;
 }
+@media (max-width: 800px) {
+  .nav-links {
+    display: none !important;
+  }
+  .nav-dropdown {
+    display: block;
+    margin: 0.7em auto 0.7em auto;
+    left: 0; right: 0;
+    position: relative;
+    max-width: 180px;
+  }
+  .navbar {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  .nav-dropdown {
+    display: block;
+    width: 90%;
+    max-width: 260px;
+    margin: 0.7em auto 0.7em auto;
+    padding: 0.7em 2.2em 0.7em 1.2em;
+    font-size: 1.08rem;
+    border-radius: 2em;
+    border: 2px solid var(--accent);
+    background: #fff;
+    color: var(--primary);
+    box-shadow: 0 4px 18px rgba(30,144,255,0.13);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+  }
+  .nav-dropdown:focus {
+    border: 2.5px solid var(--secondary);
+    box-shadow: 0 0 0 2px var(--secondary);
+  }
+  .nav-dropdown {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%2300cfff" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M5.516 7.548a1 1 0 0 1 1.415 0L10 10.617l3.07-3.07a1 1 0 1 1 1.415 1.415l-3.777 3.778a1 1 0 0 1-1.415 0L5.516 8.963a1 1 0 0 1 0-1.415z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1.1em center;
+    background-size: 1.2em;
+  }
+}
+.nav-dropdown {
+  display: none;
+}
+.job-requirements {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s cubic-bezier(.4,0,.2,1), opacity 0.25s;
+  margin-bottom: 0.5rem;
+}
+.job-card:hover .job-requirements,
+.job-card:focus-within .job-requirements {
+  max-height: 200px;
+  opacity: 1;
+}
+.requirements-list {
+  margin: 0 0 1rem 1.2rem;
+  color: var(--text);
+  font-size: 1rem;
+  padding: 0;
+  list-style: disc inside;
+}

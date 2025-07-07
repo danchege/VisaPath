@@ -26,6 +26,16 @@
                 <li><a href="contact.html" class="active">Contact</a></li>
                 <li class="nav-item"><a href="terms.html">Terms & Conditions</a></li>
             </ul>
+            <select class="nav-dropdown" aria-label="Navigation" onchange="if(this.value) window.location.href=this.value;">
+                <option value="" disabled selected>Menu</option>
+                <option value="index.html">Home</option>
+                <option value="about.html">About</option>
+                <option value="jobs.html">Jobs Available</option>
+                <option value="request-job.html">Request a Job</option>
+                <option value="testimonials.html">Testimonials</option>
+                <option value="contact.html">Contact</option>
+                <option value="terms.html">Terms & Conditions</option>
+            </select>
         </nav>
     </header>
     <main>
@@ -41,15 +51,7 @@
                 <p><strong>Address:</strong> Nairobi, Kenya</p>
             </div>
             <div class="contact-form-section">
-                <form id="contact-form" class="contact-form" autocomplete="off">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScl1cqhVSxGjm0JULv9T2UQbbxfBuX5pwobGugF15ELuLtDLQ/viewform?embedded=true" width="640" height="956" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
             <div class="map-placeholder">
                 <div class="map-box">Google Maps Placeholder</div>
