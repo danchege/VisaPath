@@ -126,7 +126,7 @@ header {
     font-size: 1.08rem;
     border-radius: 2em;
     border: 2px solid var(--accent);
-    background: #fff;
+  background: #fff;
     color: var(--primary);
     box-shadow: 0 4px 18px rgba(30,144,255,0.13);
     font-family: 'Montserrat', sans-serif;
@@ -691,7 +691,8 @@ footer {
     display: block;
     width: 98%;
     max-width: 260px;
-    margin: 0.5em auto 0.5em 0;
+    margin: 0.5em auto !important;
+    float: none;
     padding: 0.5em 1em;
     font-size: 1.05rem;
     border-radius: 1.2em;

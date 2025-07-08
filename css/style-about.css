@@ -202,6 +202,10 @@ footer {
   .values-icons {
     gap: 1.2rem;
   }
+  .nav-dropdown {
+    margin: 0.5em auto !important;
+    float: none;
+  }
 }
 @media (max-width: 600px) {
   .navbar {

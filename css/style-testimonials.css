@@ -261,6 +261,10 @@ footer {
     background-position: right 1.1em center;
     background-size: 1.2em;
   }
+  .nav-dropdown {
+    margin: 0.5em auto !important;
+    float: none;
+  }
 }
 .nav-dropdown {
   display: none;

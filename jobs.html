@@ -1441,8 +1441,27 @@
         </div>
         <div class="footer-copy">&copy; 2025 VisaPath. All rights reserved.</div>
     </footer>
+    <!-- Application Modal -->
+    <div id="applyModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close-modal" id="closeModalBtn">&times;</span>
+        <h2>Apply for <span id="modalJobTitle"></span> (<span id="modalJobCountry"></span>)</h2>
+        <form id="jobApplicationForm">
+          <input type="hidden" id="modalJobInput" name="job">
+          <input type="hidden" id="modalCountryInput" name="country">
+          <label for="applicantName">Name:</label>
+          <input type="text" id="applicantName" name="name" required>
+          <label for="applicantEmail">Email:</label>
+          <input type="email" id="applicantEmail" name="email" required>
+          <label for="applicantPhone">Phone Number:</label>
+          <input type="tel" id="applicantPhone" name="phone" required>
+          <button type="submit" class="btn-primary">Send Application</button>
+        </form>
+      </div>
+    </div>
+    <script src="js/script-jobs.js"></script>
+    <script src="js/script-apply-modal.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init({ once: false });</script>
-    <script src="js/script-jobs.js"></script>
 </body>
 </html> 
