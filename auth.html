@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register | VisaPath</title>
+  <link rel="stylesheet" href="css/style-auth.css">
+  <!-- Firebase App (core) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <!-- Firebase Auth -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyANSXoLnficUUynGg5oTAFPTrk8Xf0sH6E",
+      authDomain: "visapath-bf564.firebaseapp.com",
+      projectId: "visapath-bf564",
+      storageBucket: "visapath-bf564.appspot.com",
+      messagingSenderId: "141265978291",
+      appId: "1:141265978291:web:YOUR_APP_ID" // Replace with your actual appId if needed
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+<body>
+  <div class="auth-container">
+    <h1>VisaPath</h1>
+    <div class="auth-tabs">
+      <button id="showLogin" class="active">Login</button>
+      <button id="showRegister">Register</button>
+    </div>
+    <form id="loginForm" class="auth-form">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email" required autocomplete="username">
+      <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password">
+      <button type="submit">Login</button>
+    </form>
+    <form id="registerForm" class="auth-form" style="display:none;">
+      <h2>Register</h2>
+      <input type="email" id="registerEmail" placeholder="Email" required autocomplete="username">
+      <input type="password" id="registerPassword" placeholder="Password" required autocomplete="new-password">
+      <button type="submit">Register</button>
+    </form>
+    <div style="margin: 1.2em 0;">
+      <button id="googleSignInBtn" class="google-btn" type="button">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo" style="width:1.3em;vertical-align:middle;margin-right:0.5em;"> Register with Google
+      </button>
+    </div>
+    <div id="authMessage"></div>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html> 

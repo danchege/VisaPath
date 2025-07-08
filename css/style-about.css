@@ -146,6 +146,27 @@ footer {
 .nav-dropdown {
   display: none;
 }
+.logout-icon-btn {
+  background: none;
+  border: none;
+  color: var(--accent, #00cfff);
+  font-size: 1.3rem;
+  padding: 0.2em 0.6em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  margin-left: 0.7em;
+  outline: none;
+  vertical-align: middle;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.logout-icon-btn:hover, .logout-icon-btn:focus {
+  background: rgba(0,207,255,0.10);
+  color: var(--secondary, #1e90ff);
+}
 @media (max-width: 800px) {
   .nav-links {
     display: none !important;

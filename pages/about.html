@@ -12,6 +12,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyANSXoLnficUUynGg5oTAFPTrk8Xf0sH6E",
+        authDomain: "visapath-bf564.firebaseapp.com",
+        projectId: "visapath-bf564",
+        storageBucket: "visapath-bf564.appspot.com",
+        messagingSenderId: "141265978291",
+        appId: "1:141265978291:web:YOUR_APP_ID"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (!user) {
+          window.location.href = "../auth.html";
+        }
+      });
+      document.getElementById('logoutBtn').onclick = function() {
+        firebase.auth().signOut().then(function() {
+          window.location.href = '../auth.html';
+        });
+      };
+    </script>
     <header class="wow animate__animated animate__fadeInDown" data-wow-delay="0.1s">
         <nav class="navbar">
             <div class="logo wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
@@ -27,6 +50,7 @@
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button id="logoutBtn" class="logout-icon-btn" title="Logout" style="margin-left:auto;">⎋</button>
         </nav>
     </header>
     <main>
