@@ -71,3 +71,39 @@ document.querySelectorAll('.rotating-icons .icon').forEach(icon => {
   window.addEventListener('mousemove', parallax);
   window.addEventListener('deviceorientation', parallax);
 })();
+
+// --- Hero Background Slideshow ---
+(function() {
+  const bgImages = [
+    'assets/images/background/visa 1.jpg',
+    'assets/images/background/visa 2.jpg',
+    'assets/images/background/visa 3.jpg'
+  ];
+  const heroBg = document.querySelector('.hero-bg');
+  if (!heroBg) return;
+  let current = 0;
+  let imgEls = [];
+  // Create img elements for each background
+  bgImages.forEach((src, i) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.className = 'hero-bg-img';
+    img.style.opacity = i === 0 ? '1' : '0';
+    img.style.transition = 'opacity 1.2s ease';
+    img.style.position = 'absolute';
+    img.style.top = '0';
+    img.style.left = '0';
+    img.style.width = '100vw';
+    img.style.height = '100vh';
+    img.style.objectFit = 'cover';
+    img.style.zIndex = '0';
+    heroBg.appendChild(img);
+    imgEls.push(img);
+  });
+  setInterval(() => {
+    const prev = current;
+    current = (current + 1) % bgImages.length;
+    imgEls[prev].style.opacity = '0';
+    imgEls[current].style.opacity = '1';
+  }, 3000);
+})();
